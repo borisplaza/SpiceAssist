@@ -19,7 +19,8 @@ async function sendMessage(text){
 document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const i=document.getElementById('msg');const t=i.value.trim();if(t){i.value='';sendMessage(t)}});
 document.querySelectorAll('.chips button').forEach(b=>b.addEventListener('click',()=>sendMessage(b.dataset.q)));
 document.getElementById('contactForm').addEventListener('submit',async e=>{
- const payload={
+e.preventDefault();
+  const payload={
   session_id: sessionId,
   name: document.getElementById('name').value,
   email: document.getElementById('email').value,
