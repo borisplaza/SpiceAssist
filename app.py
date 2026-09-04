@@ -213,15 +213,15 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-            def do_GET(self):
-        if self.path.startswith('/api/health'):
-            return self._json(200, {'status':'ok','time':now_iso()})
-        if self.path.startswith('/api/requests'):
-            rows = db_query('SELECT id,session_id,intent,quantity,order_reference,status,created_at FROM requests ORDER BY id DESC LIMIT 50')
-            return self._json(200, {'rows':rows})
-        if self.path == '/':
-            self.path = '/index.html'
-        return super().do_GET()
+    def do_GET(self):
+    if self.path.startswith('/api/health'):
+        return self._json(200, {'status':'ok','time':now_iso()})
+    if self.path.startswith('/api/requests'):
+        rows = db_query('SELECT id,session_id,intent,quantity,order_reference,status,created_at FROM requests ORDER BY id DESC LIMIT 50')
+        return self._json(200, {'rows':rows})
+    if self.path == '/':
+        self.path = '/index.html'
+    return super().do_GET()
 
     def do_POST(self):
         length = int(self.headers.get('Content-Length','0'))
