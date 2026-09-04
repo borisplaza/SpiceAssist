@@ -213,7 +213,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-        def do_GET(self):
+            def do_GET(self):
         if self.path.startswith('/api/health'):
             return self._json(200, {'status':'ok','time':now_iso()})
         if self.path.startswith('/api/requests'):
