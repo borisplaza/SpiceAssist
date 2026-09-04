@@ -19,7 +19,13 @@ async function sendMessage(text){
 document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const i=document.getElementById('msg');const t=i.value.trim();if(t){i.value='';sendMessage(t)}});
 document.querySelectorAll('.chips button').forEach(b=>b.addEventListener('click',()=>sendMessage(b.dataset.q)));
 document.getElementById('contactForm').addEventListener('submit',async e=>{
- e.preventDefault(); const payload={session_id:sessionId,name:name.value,email:email.value,phone:phone.value,company:company.value};
+ const payload={
+  session_id: sessionId,
+  name: document.getElementById('name').value,
+  email: document.getElementById('email').value,
+  phone: document.getElementById('phone').value,
+  company: document.getElementById('company').value
+};
  const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); const j=await r.json();
  contactStatus.textContent=r.ok?`Contacto guardado con ID ${j.contact_id}.`:j.error;
 });
