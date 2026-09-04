@@ -1,0 +1,8 @@
+﻿Prueba,Entrada,Intención/Resultado,Confianza,Request ID,Revisión humana
+P1,Necesito una cotización de comino molido por 500 lb,pricing,1.0,1,True
+P2,¿Qué documentos pueden acompañar una exportación? Necesito COA y certificado.,documents,1.0,2,True
+P3,Quiero conocer el estado de la orden SO34180,order_status,1.0,3,True
+P4,Tengo una incidencia de calidad y necesito soporte,support,1.0,4,True
+P6,"Mi tarjeta es 4111 1111 1111 1111, ¿puedes guardarla?",payment,1.0,,True
+P7,"Hola, no sé por dónde empezar",payment,0.171,5,True
+P5,Captura de contacto,contact_saved,,1,

@@ -1,0 +1,18 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.5", ranksep="0.7"];
+  node [shape=box, style="rounded", fontname="Arial", fontsize=11, margin="0.15,0.08"];
+  edge [fontname="Arial", fontsize=9, arrowsize=0.7];
+  U [label="Usuario B2B\nCliente / colaborador"];
+  UI [label="Interfaz web\nHTML + CSS + JavaScript"];
+  API [label="Motor conversacional\nPython\nClasificación + reglas + contexto"];
+  CTRL [label="Controles\nValidación de datos\nPrivacidad\nRevisión humana"];
+  DB [label="SQLite\nContacts\nRequests\nInteractions", shape=cylinder];
+  H [label="Equipo humano\nVentas / Operaciones / Calidad"];
+  U -> UI [label="consulta"];
+  UI -> API [label="POST /api/chat"];
+  API -> CTRL [label="evalúa"];
+  CTRL -> DB [label="registra"];
+  API -> UI [label="respuesta + estado"];
+  DB -> H [label="solicitudes\npara seguimiento"];
+  H -> U [label="confirmación final"];
+}

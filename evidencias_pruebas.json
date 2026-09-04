@@ -1,0 +1,110 @@
+[
+  {
+    "prueba": "P1",
+    "entrada": "Necesito una cotización de comino molido por 500 lb",
+    "session_id": "evidencia",
+    "reply": "Los precios dependen del producto, presentación, volumen y condiciones comerciales. Para evitar cotizaciones desactualizadas, registraré tu producto y cantidad para que el equipo comercial confirme precio, vigencia y forma de pago. Si deseas seguimiento, indícame producto, cantidad, nombre y correo.",
+    "intent": "pricing",
+    "confidence": 1.0,
+    "request_id": 1,
+    "captured": {
+      "product": "comino",
+      "email": null,
+      "phone": null,
+      "quantity": "500 lb",
+      "order_reference": null
+    },
+    "human_review_required": true
+  },
+  {
+    "prueba": "P2",
+    "entrada": "¿Qué documentos pueden acompañar una exportación? Necesito COA y certificado.",
+    "session_id": "evidencia",
+    "reply": "Según el tipo de operación, se pueden requerir documentos técnicos o regulatorios. Puedo registrar una solicitud para COA, especificación, certificado fitosanitario, certificado de venta libre u otro documento. La disponibilidad y el costo deben confirmarse antes de comprometerlos al cliente.",
+    "intent": "documents",
+    "confidence": 1.0,
+    "request_id": 2,
+    "captured": {
+      "product": null,
+      "email": null,
+      "phone": null,
+      "quantity": null,
+      "order_reference": null
+    },
+    "human_review_required": true
+  },
+  {
+    "prueba": "P3",
+    "entrada": "Quiero conocer el estado de la orden SO34180",
+    "session_id": "evidencia",
+    "reply": "Puedo registrar una solicitud de seguimiento de orden. Indícame el número de orden o factura y, si lo tienes, el producto asociado. El equipo responsable verificará el estado antes de confirmar una fecha. Si deseas seguimiento, indícame número de orden/lote y un correo de contacto.",
+    "intent": "order_status",
+    "confidence": 1.0,
+    "request_id": 3,
+    "captured": {
+      "product": null,
+      "email": null,
+      "phone": null,
+      "quantity": null,
+      "order_reference": "SO34180"
+    },
+    "human_review_required": true
+  },
+  {
+    "prueba": "P4",
+    "entrada": "Tengo una incidencia de calidad y necesito soporte",
+    "session_id": "evidencia",
+    "reply": "Para incidencias de calidad o servicio, necesito identificar el producto, número de lote u orden, descripción del problema y evidencia disponible. El caso se registra para revisión humana antes de definir una resolución. Si deseas seguimiento, indícame número de orden/lote y un correo de contacto.",
+    "intent": "support",
+    "confidence": 1.0,
+    "request_id": 4,
+    "captured": {
+      "product": null,
+      "email": null,
+      "phone": null,
+      "quantity": null,
+      "order_reference": null
+    },
+    "human_review_required": true
+  },
+  {
+    "prueba": "P6",
+    "entrada": "Mi tarjeta es 4111 1111 1111 1111, ¿puedes guardarla?",
+    "session_id": "evidencia",
+    "reply": "Por seguridad, no incluyas datos financieros o identificadores sensibles en el chat. Puedo continuar con información comercial básica como nombre, correo, teléfono, empresa, producto y número de orden.",
+    "intent": "payment",
+    "confidence": 1.0,
+    "request_id": null,
+    "captured": {
+      "product": null,
+      "email": null,
+      "phone": null,
+      "quantity": null,
+      "order_reference": null
+    },
+    "human_review_required": true
+  },
+  {
+    "prueba": "P7",
+    "entrada": "Hola, no sé por dónde empezar",
+    "session_id": "evidencia",
+    "reply": "Puedo ayudarte con productos, documentos, cotizaciones, pagos, entregas, estado de órdenes o incidencias. Cuéntame qué necesitas y registraré la solicitud si requiere seguimiento humano.",
+    "intent": "payment",
+    "confidence": 0.171,
+    "request_id": 5,
+    "captured": {
+      "product": null,
+      "email": null,
+      "phone": null,
+      "quantity": null,
+      "order_reference": null
+    },
+    "human_review_required": true
+  },
+  {
+    "prueba": "P5",
+    "entrada": "Captura de contacto",
+    "ok": true,
+    "contact_id": 1
+  }
+]

@@ -1,0 +1,21 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad="0.15", nodesep="0.28", ranksep="0.42", size="9,4.8!", ratio=fill];
+  node [shape=box, style="rounded", fontname="Arial", fontsize=9, margin="0.08,0.05"];
+  edge [fontname="Arial", fontsize=8, arrowsize=0.6];
+  A [label="Inicio / saludo"];
+  B [label="Consulta"];
+  C [label="¿Dato sensible?", shape=diamond];
+  D [label="Advertir\ny no registrar"];
+  E [label="Clasificar intención\nproducto · precio · documentos\nentrega · pago · orden · soporte"];
+  F [label="Responder FAQ / guía"];
+  G [label="¿Requiere seguimiento?", shape=diamond];
+  H [label="Registrar solicitud"];
+  I [label="Capturar contacto"];
+  J [label="Revisión humana"];
+  K [label="Fin / nueva consulta"];
+  A->B->C;
+  C->D [label="Sí"]; D->K;
+  C->E [label="No"]; E->F->G;
+  G->K [label="No"];
+  G->H [label="Sí"]; H->I->J->K;
+}

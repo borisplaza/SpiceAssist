@@ -1,0 +1,9 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.6", ranksep="0.6"];
+  node [shape=record, fontname="Arial", fontsize=9];
+  contacts [label="{CONTACTS|id PK|name|email|phone|company|created_at}"];
+  requests [label="{REQUESTS|id PK|session_id|contact_id FK|intent|product|quantity|order_reference|message|status|created_at}"];
+  interactions [label="{INTERACTIONS|id PK|session_id|role|message|intent|confidence|created_at}"];
+  contacts -> requests [label="1 : N"];
+  interactions -> requests [style=dashed, label="session_id"];
+}

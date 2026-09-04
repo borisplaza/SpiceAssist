@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpiceAssist | Asistente comercial B2B</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>SpiceAssist</h1><p>Asistente comercial inteligente para distribución B2B de especias</p></div>
+    <span class="badge">Prototipo académico</span>
+  </header>
+  <main>
+    <section class="chat-card">
+      <div id="messages" class="messages"></div>
+      <div class="chips">
+        <button data-q="Necesito una cotización de comino molido por 500 lb">Cotización</button>
+        <button data-q="¿Qué documentos pueden acompañar una exportación?">Documentos</button>
+        <button data-q="Quiero conocer el estado de la orden SO34180">Estado de orden</button>
+        <button data-q="Tengo una incidencia de calidad y necesito soporte">Incidencia</button>
+      </div>
+      <form id="chatForm" class="input-row">
+        <input id="msg" autocomplete="off" placeholder="Escribe tu consulta..." required>
+        <button>Enviar</button>
+      </form>
+      <p class="micro">No compartas contraseñas, tarjetas, SSN ni datos sensibles. Las cotizaciones, fechas y resoluciones requieren revisión humana.</p>
+    </section>
+    <aside>
+      <section class="panel">
+        <h2>Datos para seguimiento</h2>
+        <form id="contactForm">
+          <input id="name" placeholder="Nombre" required>
+          <input id="email" type="email" placeholder="Correo" required>
+          <input id="phone" placeholder="Teléfono">
+          <input id="company" placeholder="Empresa">
+          <button>Guardar contacto</button>
+        </form>
+        <div id="contactStatus" class="status"></div>
+      </section>
+      <section class="panel">
+        <h2>Qué puede hacer</h2>
+        <ul>
+          <li>Orientar sobre productos y documentos.</li>
+          <li>Clasificar consultas por intención.</li>
+          <li>Registrar solicitudes en SQLite en tiempo real.</li>
+          <li>Capturar contactos y vincularlos a la conversación.</li>
+          <li>Escalar decisiones sensibles a revisión humana.</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+</div>
+<script src="app.js"></script>
+</body></html>
