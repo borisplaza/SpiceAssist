@@ -269,7 +269,7 @@ class Handler(SimpleHTTPRequestHandler):
 
 def main():
     init_db()
-    host='127.0.0.1'; port=int(os.environ.get('PORT','8000'))
+    host='0.0.0.0'; port=int(os.environ.get('PORT','8000'))
     print(f'SpiceAssist disponible en http://{host}:{port}')
     ThreadingHTTPServer((host,port), Handler).serve_forever()
 
